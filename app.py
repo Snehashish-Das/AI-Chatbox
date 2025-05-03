@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 import markdown2
 
 app = Flask(__name__)
-app.secret_key = "AIzaSyD8HDWrPeUmIvNC-QhDr6M8uKNjXJvjGxc"
+app.secret_key = "INSERT YOUR OWN"
 
 # Server-side Session Setup --------------------------------------
 app.config['SESSION_TYPE'] = 'filesystem'
@@ -19,7 +19,7 @@ app.config['SESSION_USE_SIGNER'] = True
 Session(app)
 
 # Google Gemini Setup --------------------------------------------
-genai.configure(api_key="AIzaSyD8HDWrPeUmIvNC-QhDr6M8uKNjXJvjGxc")
+genai.configure(api_key="INSERT YOUR OWN")
 model = genai.GenerativeModel("models/gemini-2.5-pro-exp-03-25")
 
 login_manager = LoginManager()
